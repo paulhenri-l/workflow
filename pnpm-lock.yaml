@@ -1428,8 +1428,8 @@ importers:
         specifier: ^0.544.0
         version: 0.544.0(react@19.2.0)
       nitro:
-        specifier: npm:nitro-nightly@latest
-        version: nitro-nightly@3.0.1-20251108-180447-f148172c(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(better-sqlite3@11.10.0)(chokidar@4.0.3)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))(ioredis@5.8.2)(lru-cache@11.2.2)(vite@7.1.12(@types/node@22.19.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0))
+        specifier: 'catalog:'
+        version: nitro-nightly@3.0.1-20251031-202656-883af4f9(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(better-sqlite3@11.10.0)(chokidar@4.0.3)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))(ioredis@5.8.2)(lru-cache@11.2.2)(vite@7.1.12(@types/node@22.19.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0))
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -9007,22 +9007,6 @@ packages:
       xml2js:
         optional: true
 
-  nitro-nightly@3.0.1-20251108-180447-f148172c:
-    resolution: {integrity: sha512-OC0GupaTQFARA7SGvEP+qYGReVKqKIPswetMzWCY3V0Gs3HzFxN4gh2V5HT/RPOn9/705FNGmmtHS0GMbT+LGg==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    hasBin: true
-    peerDependencies:
-      rolldown: '*'
-      vite: ^7
-      xml2js: ^0.6.2
-    peerDependenciesMeta:
-      rolldown:
-        optional: true
-      vite:
-        optional: true
-      xml2js:
-        optional: true
-
   nitropack@2.12.7:
     resolution: {integrity: sha512-HWyzMBj2d8b14J6Cfnxv97ztnuHIgXNcrGiWCruLfb2ZfKsp6OCbZYJm5T9sv/ZKl8LedhatrMKG66HWJux9Rg==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -10246,11 +10230,6 @@ packages:
 
   srvx@0.8.16:
     resolution: {integrity: sha512-hmcGW4CgroeSmzgF1Ihwgl+Ths0JqAJ7HwjP2X7e3JzY7u4IydLMcdnlqGQiQGUswz+PO9oh/KtCpOISIvs9QQ==}
-    engines: {node: '>=20.16.0'}
-    hasBin: true
-
-  srvx@0.9.4:
-    resolution: {integrity: sha512-yACjRbHWbI3ehhPCrEKBZvAooe/xgJIdA7QRYiYFI1VtsiGyDpSQS5r9Q6ZgTa+R0umaoJhs2umKuGlL3/nDbQ==}
     engines: {node: '>=20.16.0'}
     hasBin: true
 
@@ -17524,10 +17503,6 @@ snapshots:
     dependencies:
       uncrypto: 0.1.3
 
-  crossws@0.4.1(srvx@0.9.4):
-    optionalDependencies:
-      srvx: 0.9.4
-
   crossws@0.4.1(srvx@0.9.5):
     optionalDependencies:
       srvx: 0.9.5
@@ -18757,17 +18732,10 @@ snapshots:
     optionalDependencies:
       crossws: 0.4.1(srvx@0.9.5)
 
-  h3@2.0.1-rc.5(crossws@0.4.1(srvx@0.9.4)):
-    dependencies:
-      rou3: 0.7.10
-      srvx: 0.9.4
-    optionalDependencies:
-      crossws: 0.4.1(srvx@0.9.4)
-
   h3@2.0.1-rc.5(crossws@0.4.1(srvx@0.9.5)):
     dependencies:
       rou3: 0.7.10
-      srvx: 0.9.4
+      srvx: 0.9.5
     optionalDependencies:
       crossws: 0.4.1(srvx@0.9.5)
 
@@ -20229,16 +20197,16 @@ snapshots:
   nitro-nightly@3.0.1-20251031-202656-883af4f9(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(better-sqlite3@11.10.0)(chokidar@4.0.3)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))(ioredis@5.8.2)(lru-cache@11.2.2)(vite@7.1.12(@types/node@22.19.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)):
     dependencies:
       consola: 3.4.2
-      crossws: 0.4.1(srvx@0.9.4)
+      crossws: 0.4.1(srvx@0.9.5)
       db0: 0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))
-      esbuild: 0.25.11
-      h3: 2.0.1-rc.5(crossws@0.4.1(srvx@0.9.4))
+      esbuild: 0.25.12
+      h3: 2.0.1-rc.5(crossws@0.4.1(srvx@0.9.5))
       jiti: 2.6.1
       nf3: 0.1.5
       ofetch: 2.0.0-alpha.3
       ohash: 2.0.11
-      rollup: 4.52.5
-      srvx: 0.9.4
+      rollup: 4.53.1
+      srvx: 0.9.5
       undici: 7.16.0
       unenv: 2.0.0-rc.24
       unstorage: 2.0.0-alpha.4(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(chokidar@4.0.3)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0)))(ioredis@5.8.2)(lru-cache@11.2.2)(ofetch@2.0.0-alpha.3)
@@ -20276,53 +20244,6 @@ snapshots:
   nitro-nightly@3.0.1-20251031-202656-883af4f9(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(better-sqlite3@11.10.0)(chokidar@4.0.3)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))(ioredis@5.8.2)(lru-cache@11.2.2)(vite@7.1.12(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)):
     dependencies:
       consola: 3.4.2
-      crossws: 0.4.1(srvx@0.9.4)
-      db0: 0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))
-      esbuild: 0.25.11
-      h3: 2.0.1-rc.5(crossws@0.4.1(srvx@0.9.4))
-      jiti: 2.6.1
-      nf3: 0.1.5
-      ofetch: 2.0.0-alpha.3
-      ohash: 2.0.11
-      rollup: 4.52.5
-      srvx: 0.9.4
-      undici: 7.16.0
-      unenv: 2.0.0-rc.24
-      unstorage: 2.0.0-alpha.4(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(chokidar@4.0.3)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0)))(ioredis@5.8.2)(lru-cache@11.2.2)(ofetch@2.0.0-alpha.3)
-    optionalDependencies:
-      vite: 7.1.12(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@deno/kv'
-      - '@electric-sql/pglite'
-      - '@libsql/client'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@upstash/redis'
-      - '@vercel/blob'
-      - '@vercel/functions'
-      - '@vercel/kv'
-      - aws4fetch
-      - better-sqlite3
-      - chokidar
-      - drizzle-orm
-      - idb-keyval
-      - ioredis
-      - lru-cache
-      - mongodb
-      - mysql2
-      - sqlite3
-      - uploadthing
-
-  nitro-nightly@3.0.1-20251108-180447-f148172c(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(better-sqlite3@11.10.0)(chokidar@4.0.3)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))(ioredis@5.8.2)(lru-cache@11.2.2)(vite@7.1.12(@types/node@22.19.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)):
-    dependencies:
-      consola: 3.4.2
       crossws: 0.4.1(srvx@0.9.5)
       db0: 0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0))
       esbuild: 0.25.12
@@ -20337,7 +20258,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       unstorage: 2.0.0-alpha.4(@vercel/functions@3.1.4(@aws-sdk/credential-provider-web-identity@3.844.0))(chokidar@4.0.3)(db0@0.3.4(better-sqlite3@11.10.0)(drizzle-orm@0.31.4(@opentelemetry/api@1.9.0)(@types/react@19.2.2)(better-sqlite3@11.10.0)(pg@8.16.3)(postgres@3.4.7)(react@19.2.0)))(ioredis@5.8.2)(lru-cache@11.2.2)(ofetch@2.0.0-alpha.3)
     optionalDependencies:
-      vite: 7.1.12(@types/node@22.19.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)
+      vite: 7.1.12(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.0)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -22161,8 +22082,6 @@ snapshots:
   sprintf-js@1.0.3: {}
 
   srvx@0.8.16: {}
-
-  srvx@0.9.4: {}
 
   srvx@0.9.5: {}
 
